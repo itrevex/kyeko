@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="obj"
+            type="com.trevexs.kyeko.binding.StringItemData" />
+
+    </data>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox android:id="@+id/checkbox_meat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{obj::onItemClick}"
+            android:checked="@{obj.checked}"
+            android:text="@{obj.name}" />
+    </LinearLayout>
+</layout>
